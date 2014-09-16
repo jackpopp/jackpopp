@@ -52,31 +52,37 @@ body
 	background: rgb(255, 251, 244)
 
 .main-content
-	padding-top: 12px
-
+	padding-top: 24px
+	h2
+		font-size: 40px
+	h3
+		font-size: 32px
 	section
 		@extend .col-4
 		@extend .col-4-med
 		transform: translateZ(0)
+		height: 330px
 		.content-holder
 			padding: 20px
 			border: 1px solid #222
+			color: #222
+			font-size: 20px
 			min-height: 306px
 			margin-bottom: 24px
 			transition: 1s
 			visibility: hidden
-			h1,p,a
+			h2,h3,p,a
 				transition: 1s
 			&:hover
 				transition: 1s
 				color: rgb(255, 251, 244)
-				h1,p,a
+				h2,h3,p,a
 					transition: 1s
 					color: rgb(255, 251, 244)
 				background: #222
 				border: 1px solid rgb(255, 251, 244)
 
 footer
-	min-height: 400px
+	min-height: 200px
 	background: rgb(255, 251, 244)
 	text-align: center
