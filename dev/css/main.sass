@@ -1,0 +1,65 @@
+@import 'griddle.sass'
+@import 'animate.css'
+
+body
+	opacity: 0
+	transition: 1s
+	background: rgb(255, 251, 244)
+	&.show
+		opacity: 1
+		transition: 1s
+	h1,h2,h3,h4,p,a
+		font-family: Futura, "Trebuchet MS", Arial, sans-serif
+		font-weight: 300
+
+.pull
+	position: fixed
+	top: 0
+	left: 0
+	z-index: -1
+	background: url('../img/background_c.jpg')
+
+	.heading
+		text-align: center
+		margin-top: 15%
+		h1,h2
+			color: white
+		h1
+			font-size: 100px
+			margin: 0
+			@media only screen and (max-width: 960px)
+				font-size: 60px
+			@media only screen and (max-width: 640px)
+				font-size: 40px
+
+.main
+	z-index: 2
+	position: relative
+	background: rgb(255, 251, 244)
+
+.main-content
+	padding-top: 12px
+
+	section
+		@extend .col-4
+		@extend .col-4-med
+		.content-holder
+			padding: 20px
+			border: 1px solid #222
+			min-height: 306px
+			margin-bottom: 24px
+			transition: 1s
+			h1,p,a
+				transition: 1s
+			&:hover
+				transition: 1s
+				color: rgb(255, 251, 244)
+				h1,p,a
+					transition: 1s
+					color: rgb(255, 251, 244)
+				background: #222
+				border: 1px solid rgb(255, 251, 244)
+
+footer
+	min-height: 400px
+	background: rgb(255, 251, 244)
