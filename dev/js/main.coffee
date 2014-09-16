@@ -26,7 +26,10 @@ parallax = ->
 $ ->
 	resize()
 
-	$('body').addClass('show')
+	setTimeout(
+			-> $('body').addClass('show')
+		200
+	)
 
 	$(window).resize -> resize(true)
 
