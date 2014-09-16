@@ -1,11 +1,17 @@
-resize = ->
-	$('.pull').css
-		'height': $(window).height(),
-		'width': $(window).width()
+resize = (widthOnly = false) ->
 
-	$('.main-content').css
-		'margin-top': $(window).height()
-		'min-height': $(window).height()
+	if widthOnly
+		$('.pull').css
+			'width': $(window).width()
+	else
+		$('.pull').css
+			'height': $(window).height()
+			'width': $(window).width()
+
+		$('.main-content').css
+			'margin-top': $(window).height()
+			'min-height': $(window).height()
+
 
 	#$('.main-content').find('.content-holder').each ->
 	#	$(this).css 'height', $(this).width()
@@ -22,7 +28,7 @@ $ ->
 
 	$('body').addClass('show')
 
-	$(window).resize -> resize()
+	$(window).resize -> resize(true)
 
 	$(window).scroll -> parallax()
 
