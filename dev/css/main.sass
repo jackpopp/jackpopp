@@ -17,12 +17,13 @@ body
 	top: 0
 	left: 0
 	z-index: -1
-	background: url('../img/background_small.jpg')
-	@media only screen and (min-width: 960px)
-		background: url('../img/background_large.jpg')
+	background-image: url('../img/background_small.jpg')
 	background-position: center center
 	background-size: cover
 	transform: translateZ(0)
+	background-color: rgb(29, 29, 29)
+	@media only screen and (min-width: 960px)
+		background-image: url('../img/background_large.jpg')
 
 	.heading
 		text-align: center
@@ -31,6 +32,7 @@ body
 			margin-top: 40%
 		h1,h2
 			color: white
+			text-shadow: 0px 0px 8px #666
 		h1
 			font-size: 100px
 			margin: 0
