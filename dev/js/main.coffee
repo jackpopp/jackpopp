@@ -62,7 +62,7 @@ construct = ->
 
 	setTimeout(
 			-> $('body').addClass('show')
-		200
+		50
 	)
 
 	new WOW().init()
