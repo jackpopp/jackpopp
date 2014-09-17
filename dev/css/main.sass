@@ -67,13 +67,16 @@ body
 		@extend .col-4
 		@extend .col-4-med
 		transform: translateZ(0)
-		height: 330px
 		.content-holder
 			padding: 20px
 			border: 1px solid #222
 			color: #222
 			font-size: 20px
-			min-height: 306px
+			height: 400px
+			@media only screen and (min-width: 1024px)
+				height: 350px
+			@media only screen and (min-width: 1280px)
+				height: 306px
 			margin-bottom: 24px
 			transition: 1s
 			visibility: hidden
