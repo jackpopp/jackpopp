@@ -24,6 +24,7 @@ parallax = ->
 		$('.heading').css 'opacity', val
 
 $ ->
+	$(window).scrollTop(0)
 	resize()
 
 	setTimeout(
