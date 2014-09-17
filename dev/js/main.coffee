@@ -46,7 +46,7 @@ setToTop = ->
 					$(window).scrollTop(0)
 					clearInterval(interval)
 					clearTimeout(timeout)
-			50
+			10
 		)
 	return
 
