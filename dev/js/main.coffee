@@ -46,7 +46,7 @@ setToTop = ->
 					$(window).scrollTop(0)
 					clearInterval(interval)
 					clearTimeout(timeout)
-			200
+			50
 		)
 	return
 
@@ -62,7 +62,7 @@ construct = ->
 
 	setTimeout(
 			-> $('body').addClass('show')
-		50
+		200
 	)
 
 	new WOW().init()
