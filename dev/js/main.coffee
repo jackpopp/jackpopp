@@ -1,3 +1,6 @@
+interval = null
+timeout = null
+
 resize = (widthOnly = false) ->
 
 	if widthOnly
@@ -22,19 +25,53 @@ parallax = ->
 
 	if val > 0
 		$('.heading').css 'opacity', val
+	return
 
-$ ->
-	$(window).scrollTop(0)
+###
+	Create an interval to force the page to scroll to the top, once it has reached the top
+	kill the interval
+###
+
+setToTop = ->
+	if interval is null
+		interval = setInterval(
+			-> 	
+				setToTop()
+			50
+		)
+
+	if $(window).scrollTop() > 0
+		timeout = setTimeout(
+				-> 
+					$(window).scrollTop(0)
+					clearInterval(interval)
+					clearTimeout(timeout)
+			200
+		)
+	return
+
+setEventHandlers = ->
+	$(window).resize -> resize(true)
+	$(window).scroll -> parallax()
+	return
+
+construct = ->
+	setToTop()
 	resize()
+	setEventHandlers()
 
 	setTimeout(
 			-> $('body').addClass('show')
 		200
 	)
 
-	$(window).resize -> resize(true)
-
-	$(window).scroll -> parallax()
-
 	new WOW().init()
+	return
+
+$ ->
+	construct()
+	
+
+
+	
 	
