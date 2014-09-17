@@ -1,5 +1,4 @@
 interval = null
-timeout = null
 
 resize = (widthOnly = false) ->
 
@@ -41,13 +40,8 @@ setToTop = ->
 		)
 
 	if $(window).scrollTop() > 0
-		timeout = setTimeout(
-				-> 
-					$(window).scrollTop(0)
-					clearInterval(interval)
-					clearTimeout(timeout)
-			10
-		)
+		$(window).scrollTop(0)
+		clearInterval(interval)
 	return
 
 setEventHandlers = ->
