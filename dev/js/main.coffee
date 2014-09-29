@@ -50,6 +50,7 @@ setEventHandlers = ->
 	return
 
 construct = ->
+	# if scroll top is more than 0 detect elements that need animation above the folder and animate them in ready
 	setToTop()
 	resize()
 	setEventHandlers()
